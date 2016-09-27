@@ -1,3 +1,3 @@
-/**
- * Created by taylorboyd on 9/27/16.
- */
+angular.module('app').controller('hubCtrl', function ($scope, $rootScope, $http, $location, gIdentity, $cookies) {
+  console.log($cookies.get('gIdentity'));
+});

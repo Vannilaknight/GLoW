@@ -7,9 +7,6 @@ var express = require('express'),
 
 
 module.exports = function (app, config) {
-
-    console.log("ExPRESS");
-
     app.set('views', config.self.rootPath + '/server/views');
     app.set('view engine', 'jade');
     app.use(
@@ -25,4 +22,4 @@ module.exports = function (app, config) {
     app.use(bodyParser.json());
     app.use(session({secret: 'Wish upon a star', resave: false, saveUninitialized: false}));
     app.use(express.static(config.self.rootPath + '/public'));
-}
+};

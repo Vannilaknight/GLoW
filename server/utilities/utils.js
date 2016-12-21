@@ -11,5 +11,5 @@ function inspect(object, showHidden, levels) {
 }
 
 module.exports = {
-    inspect
+    inspect: inspect
 };

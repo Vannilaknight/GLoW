@@ -1,9 +1,7 @@
-'use strict';
+var path = require('path');
 
-let path = require('path');
-
-let utils = require('../utilities/utils');
-let rootPath = path.normalize(__dirname + '/../../');
+var utils = require('../utilities/utils');
+var rootPath = path.normalize(__dirname + '/../../');
 
 function isEnv(e) {
     return process.env.NODE_ENV === e;
@@ -14,7 +12,7 @@ function createKey(name) {
 }
 
 function setEnv(name, defaultValue, override) {
-    let key = createKey(name);
+    var key = createKey(name);
     if (override)
         process.env[key] = defaultValue;
     else
@@ -22,14 +20,14 @@ function setEnv(name, defaultValue, override) {
 }
 
 function getEnv(name) {
-    let key = createKey(name);
+    var key = createKey(name);
     return process.env[key];
 }
 
 setEnv('port', 3030);
 setEnv('glow_api', 'http://localhost:3031');
 
-let config = {
+var config = {
     self: {
         port: getEnv('port'),
         rootPath: rootPath,

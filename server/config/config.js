@@ -8,7 +8,7 @@ function isEnv(e) {
 }
 
 function createKey(name) {
-    return `GLOW_${name.toUpperCase()}`;
+    return 'GLOW_' + name.toUpperCase();
 }
 
 function setEnv(name, defaultValue, override) {

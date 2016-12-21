@@ -35,7 +35,7 @@ angular.module('app').factory('gAuth', function ($http, $rootScope, gIdentity, $
         gIdentity.currentUser = newUser;
         dfd.resolve();
       }, function (response) {
-        dfd.reject(response.data.reason);
+        dfd.reject(response.data);
       });
 
       return dfd.promise;

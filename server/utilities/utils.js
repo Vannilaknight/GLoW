@@ -1,7 +1,5 @@
-'use strict';
-
-let util = require('util');
-let assert = require('assert-plus');
+var util = require('util');
+var assert = require('assert-plus');
 
 function inspect(object, showHidden, levels) {
     assert.optionalBool(showHidden, 'showHidden');

@@ -27,11 +27,13 @@ angular.module('app').controller('accountCtrl', function ($scope, $rootScope, $h
 
   $scope.signup = function () {
     var newUserData = {
-      username: $scope.email,
+      email: $scope.email,
+      username: $scope.username,
       password: $scope.password,
-      firstName: $scope.fname,
-      lastName: $scope.lname
+      confirm: $scope.confirm,
     };
+
+    console.log(newUserData);
 
     gAuth.createUser(newUserData).then(function () {
       console.log('User account created!');

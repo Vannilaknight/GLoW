@@ -1,3 +1,23 @@
-//
-   Created by taylorboyd on 9/27/16.
-
+.wrapper-register
+    .wrapper-container
+        h1 Register
+        form.form(ng-submit="signup()")
+            input(type='email', placeholder='Email', ng-model="email")
+            input(type='text', placeholder='Username', ng-model="username")
+            input(type='password', placeholder='Password', ng-model="password")
+            input(type='password', placeholder='Confirm Password', ng-model="confirm")
+            p
+                small Already a user? Login&nbsp;
+                    a(href='/login') Here
+            button#login-button(type='submit') Register
+    ul.bg-bubbles
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li

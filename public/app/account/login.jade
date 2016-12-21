@@ -1,12 +1,21 @@
-.container
-    form.form-signin(ng-submit="login(username, password)")
-        h2.form-signin-heading Log In
-        label.sr-only(for='username') Username
-        input#username.form-control(type='text', placeholder='Username', required='', autofocus='', ng-model="username")
-        label.sr-only(for='password') Password
-        input#password.form-control(type='password', placeholder='Password', required='', ng-model="password")
-        .checkbox
-            label
-                input(type='checkbox', value='remember-me')
-                |  Remember me
-        button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+.wrapper-login
+    .wrapper-container
+        h1 Welcome
+        form.form(ng-submit="login(username, password)")
+            input(type='text', placeholder='Username', ng-model="username")
+            input(type='password', placeholder='Password', ng-model="password")
+            p
+                small New user? Register&nbsp;
+                    a(href='/register') Here
+            button#login-button(type='submit') Login
+    ul.bg-bubbles
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li

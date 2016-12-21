@@ -1,5 +1,5 @@
 angular.module('app').factory('gUser', function($resource) {
-  var UserResource = $resource('/register', {_id: "@id"}, {
+  var UserResource = $resource('/user', {_id: "@id"}, {
     update: {method:'PUT',isArray:false}
   });
 

@@ -1,4 +1,11 @@
 extends ../includes/layout
 
 block main-content
+    .gNav.col-lg-12
+        .navbar-brand {{currentUser.username}}
+        a.pull-right.loginBtn(href="/login", ng-if="!currentUser")
+            button.btn.btn-primary Login
+        a.pull-right.loginBtn(href="#", ng-if="currentUser", ng-click="logout()")
+            button.btn.btn-primary Logout
+        .sexy_line
     div.view(ng-view)
